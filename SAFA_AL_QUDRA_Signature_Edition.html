@@ -159,21 +159,28 @@
 
         function runAway() {
             attempts++;
-            const container = document.body;
             const btnRect = btn.getBoundingClientRect();
-            const maxX = window.innerWidth - btnRect.width - 20;
-            const maxY = window.innerHeight - btnRect.height - 20;
+            const pad = 40;
+            const minX = pad;
+            const minY = pad;
+            const maxX = window.innerWidth - btnRect.width - pad;
+            const maxY = window.innerHeight - btnRect.height - pad;
 
-            let newX, newY, distance;
+            let newX, newY, distance, tries = 0;
             const oldX = btnRect.left;
             const oldY = btnRect.top;
 
-            // Make sure it jumps far enough away
+            // Jump far but stay fully inside viewport
             do {
-                newX = Math.random() * maxX + 10;
-                newY = Math.random() * maxY + 10;
+                newX = minX + Math.random() * (maxX - minX);
+                newY = minY + Math.random() * (maxY - minY);
                 distance = Math.sqrt((newX - oldX) ** 2 + (newY - oldY) ** 2);
-            } while (distance < 200);
+                tries++;
+            } while (distance < 150 && tries < 50);
+
+            // Clamp as safety net
+            newX = Math.max(minX, Math.min(newX, maxX));
+            newY = Math.max(minY, Math.min(newY, maxY));
 
             btn.style.position = 'fixed';
             btn.style.left = newX + 'px';
