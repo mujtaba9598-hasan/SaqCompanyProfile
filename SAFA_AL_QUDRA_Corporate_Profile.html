@@ -14,6 +14,7 @@
             background: linear-gradient(135deg, #0a1628 0%, #1a2a4a 50%, #0a1628 100%);
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: #fff;
+            overflow: hidden;
         }
         .container {
             text-align: center;
@@ -28,6 +29,15 @@
             font-size: 48px;
             margin-bottom: 24px;
             opacity: 0.85;
+            transition: transform 0.3s;
+        }
+        .lock-icon.shake {
+            animation: shake 0.5s ease-in-out;
+        }
+        @keyframes shake {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-15deg); }
+            75% { transform: rotate(15deg); }
         }
         h1 {
             font-size: 22px;
@@ -40,6 +50,40 @@
             color: rgba(255, 255, 255, 0.6);
             margin-bottom: 36px;
             line-height: 1.5;
+        }
+        .taunt {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.4);
+            margin-top: 12px;
+            min-height: 20px;
+            transition: opacity 0.3s;
+        }
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            position: relative;
+            min-height: 140px;
+        }
+        .unlock-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 16px 36px;
+            background: linear-gradient(135deg, #f5a623, #f7c948);
+            color: #1a1a2e;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            position: absolute;
+            transition: none;
+            z-index: 10;
+            box-shadow: 0 4px 20px rgba(245, 166, 35, 0.3);
+            user-select: none;
+            white-space: nowrap;
         }
         .cta-btn {
             display: inline-flex;
@@ -54,6 +98,8 @@
             font-weight: 600;
             transition: transform 0.2s, box-shadow 0.2s;
             box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+            position: absolute;
+            bottom: 0;
         }
         .cta-btn:hover {
             transform: translateY(-2px);
@@ -73,14 +119,86 @@
 </head>
 <body>
     <div class="container">
-        <div class="lock-icon">&#128274;</div>
+        <div class="lock-icon" id="lockIcon">&#128274;</div>
         <h1>Corporate Profile</h1>
         <p class="subtitle">This document is restricted.<br>Contact the admin to enable access to your company profile.</p>
-        <a href="https://wa.me/971527529598?text=Hi%2C%20I%20would%20like%20to%20access%20the%20SAFA%20AL%20QUDRA%20Corporate%20Profile." class="cta-btn">
-            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Contact Admin
-        </a>
+        <div class="buttons">
+            <button class="unlock-btn" id="unlockBtn" onmouseenter="runAway()" ontouchstart="runAway()">&#128275; Unlock</button>
+            <a href="https://wa.me/971527529598?text=Hi%2C%20I%20would%20like%20to%20access%20the%20SAFA%20AL%20QUDRA%20Corporate%20Profile." class="cta-btn">
+                <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Contact Admin
+            </a>
+        </div>
+        <p class="taunt" id="taunt"></p>
         <p class="phone">+971 52 752 9598</p>
     </div>
+
+    <script>
+        const btn = document.getElementById('unlockBtn');
+        const lock = document.getElementById('lockIcon');
+        const tauntEl = document.getElementById('taunt');
+        let attempts = 0;
+
+        const taunts = [
+            "Nice try!",
+            "Almost had it...",
+            "Too slow!",
+            "You really thought?",
+            "Nope.",
+            "Not today!",
+            "Maybe contact the admin instead?",
+            "I can do this all day.",
+            "Getting tired yet?",
+            "Just click Contact Admin already!",
+            "Seriously?",
+            "This button has trust issues.",
+            "404: Unlock not found.",
+            "Permission denied... forever.",
+            "The button sends its regards."
+        ];
+
+        function runAway() {
+            attempts++;
+            const container = document.body;
+            const btnRect = btn.getBoundingClientRect();
+            const maxX = window.innerWidth - btnRect.width - 20;
+            const maxY = window.innerHeight - btnRect.height - 20;
+
+            let newX, newY, distance;
+            const oldX = btnRect.left;
+            const oldY = btnRect.top;
+
+            // Make sure it jumps far enough away
+            do {
+                newX = Math.random() * maxX + 10;
+                newY = Math.random() * maxY + 10;
+                distance = Math.sqrt((newX - oldX) ** 2 + (newY - oldY) ** 2);
+            } while (distance < 200);
+
+            btn.style.position = 'fixed';
+            btn.style.left = newX + 'px';
+            btn.style.top = newY + 'px';
+
+            // Shake the lock
+            lock.classList.remove('shake');
+            void lock.offsetWidth;
+            lock.classList.add('shake');
+
+            // Show a taunt
+            tauntEl.textContent = taunts[Math.min(attempts - 1, taunts.length - 1)];
+
+            // After many attempts, make button smaller and faster
+            if (attempts > 5) {
+                const scale = Math.max(0.6, 1 - (attempts - 5) * 0.05);
+                btn.style.transform = 'scale(' + scale + ')';
+            }
+
+            // After 15 attempts, button vanishes
+            if (attempts >= 15) {
+                btn.style.display = 'none';
+                tauntEl.textContent = "The button has left the chat. Contact the admin.";
+            }
+        }
+    </script>
 </body>
 </html>
