@@ -1,181 +1,1404 @@
-<!DOCTYPE html>
+<\!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAFA AL QUDRA Technical Services - Signature Edition</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #0a1628 0%, #1a2a4a 50%, #0a1628 100%);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #fff;
-        }
-        .container {
-            text-align: center;
-            padding: 60px 40px;
-            max-width: 520px;
-            width: 90%;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 16px;
-            backdrop-filter: blur(10px);
-            position: relative;
-            overflow: hidden;
-        }
-        .lock-icon {
-            font-size: 48px;
-            margin-bottom: 24px;
-            opacity: 0.85;
-        }
-        .lock-icon.shake { animation: shake 0.5s ease-in-out; }
-        @keyframes shake {
-            0%, 100% { transform: rotate(0deg); }
-            25% { transform: rotate(-15deg); }
-            75% { transform: rotate(15deg); }
-        }
-        h1 { font-size: 22px; font-weight: 600; margin-bottom: 8px; letter-spacing: 0.5px; }
-        .subtitle { font-size: 14px; color: rgba(255,255,255,0.6); margin-bottom: 32px; line-height: 1.5; }
-        .btn-zone {
-            position: relative;
-            height: 60px;
-            margin-bottom: 16px;
-        }
-        .unlock-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 14px 32px;
-            background: linear-gradient(135deg, #f5a623, #f7c948);
-            color: #1a1a2e;
-            border: none;
-            border-radius: 50px;
-            font-size: 15px;
-            font-weight: 700;
-            cursor: pointer;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 10;
-            box-shadow: 0 4px 20px rgba(245, 166, 35, 0.3);
-            user-select: none;
-            white-space: nowrap;
-        }
-        .cta-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 14px 32px;
-            background: #25D366;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 50px;
-            font-size: 15px;
-            font-weight: 600;
-            transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
-        }
-        .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 28px rgba(37,211,102,0.45); }
-        .cta-btn svg { width: 22px; height: 22px; fill: #fff; }
-        .taunt { font-size: 13px; color: rgba(255,255,255,0.4); margin-top: 16px; min-height: 20px; }
-        .phone { margin-top: 16px; font-size: 13px; color: rgba(255,255,255,0.4); }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<title>SAFA AL QUDRA - Company Profile</title>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Playfair+Display:ital,wght@1,500;1,700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  html, body { width: 210mm; height: 297mm; }
+  .page { page-break-after: always; page-break-inside: avoid; }
+  .page:last-child { page-break-after: auto; }
+}
+
+body {
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  background: #e8e8e8;
+  color: #333;
+  line-height: 1.5;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* ===== PAGE SYSTEM ===== */
+.page {
+  width: 210mm;
+  height: 297mm;
+  margin: 10px auto;
+  background:
+    radial-gradient(ellipse at 15% 12%, rgba(200,225,235,0.55) 0%, transparent 35%),
+    radial-gradient(ellipse at 85% 88%, rgba(180,210,225,0.45) 0%, transparent 38%),
+    repeating-linear-gradient(
+      115deg,
+      transparent 0px,
+      transparent 70px,
+      rgba(120,160,180,0.07) 70px,
+      rgba(120,160,180,0.07) 72px,
+      transparent 72px,
+      transparent 140px
+    ),
+    repeating-linear-gradient(
+      65deg,
+      transparent 0px,
+      transparent 90px,
+      rgba(120,160,180,0.05) 90px,
+      rgba(120,160,180,0.05) 92px,
+      transparent 92px,
+      transparent 180px
+    ),
+    linear-gradient(135deg, #F4F8FB 0%, #E8F0F5 30%, #F8FBFD 55%, #E8F0F5 80%, #F4F8FB 100%);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+}
+.page::after {
+  content: '';
+  position: absolute;
+  top: 14mm; bottom: 10mm; left: 0; right: 0;
+  background: linear-gradient(115deg, transparent 40%, rgba(255,255,255,0.35) 50%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+.page.cover::after { display: none; }
+
+@media print {
+  .page { margin: 0; box-shadow: none; }
+}
+
+/* ===== HEADER & FOOTER ===== */
+.page-header {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 14mm;
+  background: linear-gradient(135deg, #0C2340 0%, #1B3A5C 100%);
+  display: flex;
+  align-items: center;
+  padding: 0 8mm;
+  z-index: 10;
+}
+.header-logo { height: 9mm; margin-right: 3mm; }
+.header-text { color: #fff; font-size: 8pt; letter-spacing: 0.5px; }
+.header-text strong { color: #D4A843; }
+.header-slogan { margin-left: auto; color: #D4A843; font-size: 6.5pt; font-style: italic; }
+
+.page-footer {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 10mm;
+  background: #0C2340;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8mm;
+  font-size: 6pt;
+  color: #8899AA;
+  z-index: 10;
+}
+.page-footer .foot-site {
+  color: #D4A843;
+  font-size: 9pt;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+.page-footer .foot-email {
+  color: #E8EEF5;
+  font-size: 8pt;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.page-footer .foot-slogan {
+  color: #D4A843;
+  font-style: italic;
+}
+
+.page-body {
+  position: absolute;
+  top: 14mm;
+  bottom: 10mm;
+  left: 0; right: 0;
+  padding: 6mm 10mm;
+  overflow: hidden;
+}
+
+/* ===== COVER PAGE — GLASS / SHEESHAH ===== */
+.cover {
+  background:
+    radial-gradient(ellipse at 18% 15%, rgba(180,220,240,0.22) 0%, transparent 32%),
+    radial-gradient(ellipse at 82% 85%, rgba(140,200,225,0.18) 0%, transparent 35%),
+    radial-gradient(circle at 70% 25%, rgba(255,255,255,0.10) 0%, transparent 20%),
+    linear-gradient(135deg,
+      #0A1E33 0%,
+      #123A5A 18%,
+      #1D5478 35%,
+      #2A6A8C 50%,
+      #1D5478 65%,
+      #123A5A 82%,
+      #0A1E33 100%);
+}
+.cover::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background:
+    repeating-linear-gradient(
+      115deg,
+      transparent 0px,
+      transparent 58px,
+      rgba(255,255,255,0.05) 58px,
+      rgba(255,255,255,0.05) 60px,
+      transparent 60px,
+      transparent 120px
+    ),
+    repeating-linear-gradient(
+      65deg,
+      transparent 0px,
+      transparent 80px,
+      rgba(255,255,255,0.035) 80px,
+      rgba(255,255,255,0.035) 82px,
+      transparent 82px,
+      transparent 160px
+    ),
+    linear-gradient(110deg,
+      transparent 0%,
+      transparent 30%,
+      rgba(255,255,255,0.07) 45%,
+      rgba(255,255,255,0.12) 50%,
+      rgba(255,255,255,0.07) 55%,
+      transparent 70%,
+      transparent 100%);
+  pointer-events: none;
+}
+.cover::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background:
+    radial-gradient(ellipse at 25% 10%, rgba(255,255,255,0.10) 0%, transparent 18%),
+    radial-gradient(ellipse at 90% 90%, rgba(10,30,51,0.4) 0%, transparent 40%);
+  pointer-events: none;
+  z-index: 1;
+}
+.cover-content {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  padding: 15mm;
+}
+.cover-logo { width: 55mm; margin-bottom: 8mm; }
+.cover-line { width: 60mm; height: 2px; background: #D4A843; margin: 5mm 0; }
+.cover-company { color: #fff; font-size: 28pt; font-weight: 700; letter-spacing: 3px; text-align: center; }
+.cover-sub { color: #D4A843; font-size: 14pt; letter-spacing: 6px; margin-top: 2mm; }
+.cover-title { color: #fff; font-size: 18pt; font-weight: 300; letter-spacing: 4px; margin-top: 6mm; }
+.cover-slogan-quote { color: #D4A843; font-style: italic; font-size: 11pt; margin-top: 6mm; }
+.cover-slogan-main {
+  background: #D4A843;
+  color: #0C2340;
+  font-weight: 800;
+  font-size: 13pt;
+  padding: 3mm 10mm;
+  margin-top: 5mm;
+  letter-spacing: 1.5px;
+}
+.cover-web {
+  margin-top: 8mm;
+  text-align: center;
+  line-height: 1.6;
+}
+.cover-web .tagline {
+  color: #E8EEF5;
+  font-size: 10pt;
+  font-weight: 400;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+.cover-web .tagline .sep {
+  color: #D4A843;
+  margin: 0 2mm;
+  font-weight: 700;
+}
+.cover-web .site {
+  display: inline-block;
+  margin-top: 3mm;
+  color: #D4A843;
+  font-size: 11pt;
+  font-weight: 700;
+  letter-spacing: 3px;
+  padding: 1.5mm 6mm;
+  border-top: 1px solid rgba(212,168,67,0.5);
+  border-bottom: 1px solid rgba(212,168,67,0.5);
+}
+.cover-bottom {
+  position: absolute;
+  bottom: 14mm;
+  left: 0; right: 0;
+  text-align: center;
+  z-index: 2;
+}
+.cover-bottom::before {
+  content: '';
+  display: block;
+  width: 18mm;
+  height: 1px;
+  background: #D4A843;
+  margin: 0 auto 4mm;
+}
+.cover-bottom .ceo-name {
+  color: #FFFFFF;
+  font-size: 12pt;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 0;
+}
+.cover-bottom .ceo-role {
+  color: #D4A843;
+  font-size: 9pt;
+  font-style: italic;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-top: 1.5mm;
+}
+.cover-bottom .location {
+  color: #8FA4BC;
+  font-size: 8pt;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-top: 3mm;
+}
+.cover-gold-bar {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #D4A843, transparent);
+}
+.cover-gold-bar-top {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #D4A843, transparent);
+}
+
+/* ===== CEO PAGE ===== */
+.ceo-img-wrap {
+  position: relative;
+  width: 100%;
+  border-radius: 3px;
+  margin-bottom: 5mm;
+  overflow: hidden;
+}
+.ceo-img-wrap img { width: 100%; height: auto; display: block; }
+.ceo-img-wrap .img-slogan {
+  position: absolute;
+  top: 50%;
+  right: 10mm;
+  transform: translateY(-50%);
+  color: #E6C46A;
+  line-height: 1.0;
+  text-align: center;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.85), 0 0 3px rgba(0,0,0,0.95);
+  max-width: 62%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1mm;
+}
+.ceo-img-wrap .img-slogan .ln { display: block; white-space: nowrap; }
+.ceo-img-wrap .img-slogan .ln.top,
+.ceo-img-wrap .img-slogan .ln.bot {
+  font-family: 'Cinzel', 'Trajan Pro', Georgia, serif;
+  font-weight: 700;
+  font-size: 16pt;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+  color: #F3D98A;
+}
+.ceo-img-wrap .img-slogan .ln.mid {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 46pt;
+  letter-spacing: 2px;
+  margin: 1mm 0;
+  color: #F5E3A0;
+  text-transform: lowercase;
+  position: relative;
+  padding: 0 10mm;
+}
+.ceo-img-wrap .img-slogan .ln.mid::before,
+.ceo-img-wrap .img-slogan .ln.mid::after {
+  content: '';
+  position: absolute;
+  top: 55%;
+  width: 7mm;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #D4A843, transparent);
+}
+.ceo-img-wrap .img-slogan .ln.mid::before { left: 0; }
+.ceo-img-wrap .img-slogan .ln.mid::after { right: 0; }
+.ceo-img-wrap .img-slogan .sub {
+  display: block;
+  color: #F5EBD0;
+  font-size: 10pt;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 2px;
+  margin-top: 3mm;
+  text-transform: none;
+}
+.ceo-quote {
+  border-left: 3px solid #D4A843;
+  padding: 3mm 5mm;
+  margin: 3mm 5mm;
+  font-style: italic;
+  color: #444;
+  font-size: 9.5pt;
+  line-height: 1.7;
+}
+.ceo-highlight {
+  text-align: center;
+  font-size: 16pt;
+  font-weight: 800;
+  color: #D4A843;
+  padding: 4mm 0;
+  letter-spacing: 1.5px;
+  background: linear-gradient(90deg, transparent, rgba(212,168,67,0.08), transparent);
+  margin: 3mm 0;
+  border-top: 2px solid #D4A843;
+  border-bottom: 2px solid #D4A843;
+}
+.ceo-name { text-align: right; font-weight: 700; color: #0C2340; font-size: 12pt; margin-top: 4mm; }
+.ceo-title { text-align: right; color: #D4A843; font-size: 9pt; }
+
+.ceo-signature {
+  text-align: right;
+  margin-top: 8mm;
+  position: relative;
+  min-height: 30mm;
+}
+.ceo-signature::before {
+  content: '';
+  display: block;
+  width: 22mm;
+  height: 1px;
+  background: #D4A843;
+  margin: 0 0 3mm auto;
+}
+.ceo-signature .sig-name {
+  color: #0C2340;
+  font-size: 13pt;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.ceo-signature .sig-role {
+  color: #D4A843;
+  font-size: 9pt;
+  font-style: italic;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-top: 1.5mm;
+}
+.ceo-signature .sig-site {
+  display: inline-block;
+  margin-top: 3mm;
+  color: #D4A843;
+  font-size: 10pt;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  padding: 1.2mm 5mm;
+  border-top: 1px solid rgba(212,168,67,0.6);
+  border-bottom: 1px solid rgba(212,168,67,0.6);
+}
+.ceo-signature .sig-stamp {
+  position: absolute;
+  top: 12mm;
+  left: 82mm;
+  width: 32mm;
+  height: 32mm;
+  opacity: 0.85;
+  transform: rotate(-8deg);
+  transform-origin: center center;
+}
+.ceo-signature .sig-stamp svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* ===== SECTION TITLES ===== */
+.section-title-bar {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #0C2340, #1B3A5C);
+  color: #fff;
+  padding: 3mm 5mm;
+  margin-bottom: 5mm;
+  border-left: 4px solid #D4A843;
+}
+.section-title-bar .section-num {
+  font-size: 22pt;
+  font-weight: 800;
+  color: #D4A843;
+  margin-right: 4mm;
+  line-height: 1;
+}
+.section-title-bar h2 {
+  font-size: 13pt;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.cont-header {
+  font-size: 11pt;
+  color: #0C2340;
+  border-bottom: 2px solid #D4A843;
+  padding-bottom: 2mm;
+  margin-bottom: 4mm;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ===== ABOUT PAGE ===== */
+.about-logo { display: block; width: 40mm; margin: 0 auto 4mm; }
+.about-text { font-size: 9pt; text-align: justify; line-height: 1.7; margin-bottom: 3mm; color: #444; }
+.about-slogans {
+  text-align: center;
+  padding: 3mm 0;
+  margin: 3mm 0;
+}
+.about-slogans .s1 { font-style: italic; color: #D4A843; font-size: 11pt; }
+.about-slogans .s2 { font-weight: 800; color: #D4A843; font-size: 14pt; letter-spacing: 1.5px; margin-top: 1mm; }
+.info-box {
+  padding: 4mm 5mm;
+  margin: 3mm 0;
+  border-radius: 2px;
+  font-size: 8.5pt;
+  line-height: 1.6;
+}
+.info-box.mission { background: #E8EEF4; border-left: 4px solid #0C2340; }
+.info-box.vision { background: #FBF5E6; border-left: 4px solid #D4A843; }
+.info-box strong { color: #0C2340; }
+.about-web { text-align: center; font-size: 8pt; color: #888; margin-top: 3mm; }
+.about-web b { color: #1B3A5C; }
+
+/* ===== SERVICES ===== */
+.sub-header {
+  font-size: 11pt;
+  font-weight: 700;
+  color: #0C2340;
+  border-bottom: 2px solid #D4A843;
+  padding-bottom: 1.5mm;
+  margin: 4mm 0 3mm;
+  display: inline-block;
+}
+.svc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1mm 4mm;
+  font-size: 8.5pt;
+  color: #444;
+}
+.svc-item {
+  padding: 1mm 0 1mm 4mm;
+  border-left: 2px solid #D4A843;
+  line-height: 1.4;
+}
+
+/* ===== PARTNERS ===== */
+.partner-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2mm;
+  margin: 3mm 0;
+}
+.partner-card {
+  background: #E8EEF4;
+  border: 1px solid #C5D5E4;
+  text-align: center;
+  padding: 2.5mm;
+  font-size: 8pt;
+  font-weight: 600;
+  color: #0C2340;
+}
+.glass-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1mm 3mm;
+  font-size: 8.5pt;
+  margin: 2mm 0;
+}
+.glass-item { padding-left: 3mm; border-left: 2px solid #D4A843; color: #444; }
+.logo-strip {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 3mm 0;
+  margin-top: 3mm;
+  border-top: 1px solid #eee;
+}
+.logo-strip img { max-height: 12mm; max-width: 22mm; }
+
+/* ===== PROCESS ===== */
+.process-step {
+  display: grid;
+  grid-template-columns: 12mm 1fr;
+  gap: 0 3mm;
+  padding: 2.5mm 0;
+  border-bottom: 1px solid #eee;
+}
+.step-num {
+  font-size: 16pt;
+  font-weight: 800;
+  color: #D4A843;
+  text-align: center;
+  line-height: 1;
+  padding-top: 1mm;
+}
+.step-title { font-weight: 700; color: #0C2340; font-size: 9.5pt; margin-bottom: 1mm; }
+.step-desc { font-size: 8pt; color: #555; line-height: 1.6; text-align: justify; }
+.submittal-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3mm;
+  margin-top: 4mm;
+}
+.submittal-row img { width: 100%; border-radius: 2px; border: 1px solid #ddd; }
+.submittal-label { text-align: center; font-size: 7pt; color: #888; margin-top: 1mm; }
+
+/* ===== PROJECTS ===== */
+.proj-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3mm;
+  height: 100%;
+}
+.proj-card {
+  border: 1px solid #e8e8e8;
+  border-radius: 3px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.proj-img-wrap {
+  height: 50mm;
+  overflow: hidden;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.proj-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.proj-info {
+  padding: 2mm 3mm;
+  flex: 1;
+}
+.proj-name { font-weight: 700; color: #0C2340; font-size: 8pt; line-height: 1.3; }
+.proj-loc { font-size: 7pt; color: #888; }
+.proj-loc span { color: #D4A843; }
+.proj-client { font-size: 7pt; color: #888; }
+.proj-client span { color: #D4A843; }
+
+/* ===== MACHINERY ===== */
+.machine-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3mm;
+}
+.machine-img {
+  border: 1px solid #e0e0e0;
+  border-radius: 2px;
+  overflow: hidden;
+  height: 55mm;
+}
+.machine-img img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ===== HSE ===== */
+.hse-section { margin-bottom: 3mm; }
+.hse-title {
+  font-size: 9.5pt;
+  font-weight: 700;
+  color: #0C2340;
+  border-left: 3px solid #D4A843;
+  padding-left: 3mm;
+  margin-bottom: 1.5mm;
+}
+.hse-body {
+  font-size: 7.5pt;
+  color: #555;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* ===== TOC ===== */
+.toc-list { list-style: none; padding: 0; margin: 5mm 3mm; }
+.toc-item {
+  display: flex;
+  align-items: baseline;
+  padding: 2.5mm 0;
+  border-bottom: 1px dotted #ccc;
+}
+.toc-num { font-size: 16pt; font-weight: 800; color: #D4A843; width: 14mm; }
+.toc-label { font-size: 11pt; color: #0C2340; font-weight: 500; }
+
+/* ===== CONTACT ===== */
+.contact-center {
+  text-align: center;
+  padding-top: 25mm;
+}
+.contact-center .logo { width: 50mm; margin-bottom: 6mm; }
+.contact-tagline { font-size: 10pt; color: #888; margin-bottom: 5mm; }
+.contact-slogan { font-size: 18pt; font-weight: 800; color: #D4A843; margin: 4mm 0; }
+.contact-qer { font-style: italic; color: #D4A843; font-size: 12pt; margin-bottom: 6mm; }
+.contact-info { font-size: 9pt; color: #555; margin: 1mm 0; }
+.contact-info b { color: #0C2340; }
+.contact-web { font-size: 12pt; font-weight: 700; color: #1B3A5C; margin-top: 5mm; }
+</style>
 </head>
 <body>
-    <div class="container" id="card">
-        <div class="lock-icon" id="lockIcon">&#128274;</div>
-        <h1>Signature Edition</h1>
-        <p class="subtitle">This document is restricted.<br>Contact the admin to enable access to your company profile.</p>
-        <div class="btn-zone" id="btnZone">
-            <button class="unlock-btn" id="unlockBtn" onmouseenter="runAway()" ontouchstart="runAway()">&#128275; Unlock</button>
-        </div>
-        <a href="https://wa.me/971527529598?text=Hi%2C%20I%20would%20like%20to%20access%20the%20SAFA%20AL%20QUDRA%20Signature%20Edition%20Profile." class="cta-btn">
-            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Contact Admin
-        </a>
-        <p class="taunt" id="taunt"></p>
-        <p class="phone">+971 52 752 9598</p>
+
+<\!-- ===== PAGE 1: COVER ===== -->
+<div class="page cover">
+  <div class="cover-gold-bar-top"></div>
+  <div class="cover-content">
+    <img class="cover-logo" src="images/sig_0.png" alt="SAQ Logo">
+    <div class="cover-company">SAFA AL QUDRA</div>
+    <div class="cover-sub">TECHNICAL SERVICES</div>
+    <div class="cover-line"></div>
+    <div class="cover-title">COMPANY PROFILE</div>
+    <div class="cover-slogan-quote">"Quality Earns Respect"</div>
+    <div class="cover-slogan-main">WE DELIVER WHAT WE PROMISE</div>
+    <div class="cover-web">
+      <div class="tagline">SAQ Technical Services <span class="sep">|</span> Aluminum, Glass &amp; Metal Experts</div>
+      <div class="site">www.saqtechnicalservices.com</div>
     </div>
+  </div>
+  <div class="cover-bottom">
+    <div class="ceo-name">Muhammad Nauman Mahmood Khan</div>
+    <div class="ceo-role">Chief Executive Officer</div>
+    <div class="location">United Arab Emirates</div>
+  </div>
+  <div class="cover-gold-bar"></div>
+</div>
 
-    <script>
-        const btn = document.getElementById('unlockBtn');
-        const card = document.getElementById('card');
-        const lock = document.getElementById('lockIcon');
-        const tauntEl = document.getElementById('taunt');
-        let attempts = 0;
+<\!-- ===== PAGE 2: CEO MESSAGE ===== -->
+<div class="page">
+  <div class="page-header"><img class="header-logo" src="images/sig_1.png" alt="SAQ"><div class="header-text"><strong>SAFA AL QUDRA</strong> TECHNICAL SERVICES</div></div>
+  <div class="page-body">
+    <div class="ceo-img-wrap"><img src="images/sig_2.jpeg" alt="CEO">
+      <div class="img-slogan"><span class="ln top">We Deliver</span><span class="ln mid">What</span><span class="ln bot">We Promise</span><span class="sub">Quality Earns Respect</span></div></div>
+    <div class="section-title-bar"><span class="section-num">01</span><h2>MESSAGE FROM THE CEO</h2></div>
+    <div class="ceo-quote">
+      "I started SAQ Technical Services with one belief: when someone trusts you with their project, you give it everything you have. Every villa, every office, every structure we build carries our name. And I do not put my name on anything that is not done right.
+    </div>
+    <div class="ceo-highlight">WE DELIVER WHAT WE PROMISE.</div>
+    <div class="ceo-quote">
+      That is not a slogan. It is how we operate every single day. From materials to timelines to craftsmanship, your project is our priority. When you work with us, you will see the difference."
+    </div>
+    <div class="ceo-signature">
+      <div class="sig-name">Muhammad Nauman Mahmood Khan</div>
+      <div class="sig-role">CEO, SAQ Technical Services</div>
+      <div class="sig-site">www.saqtechnicalservices.com</div>
+      <div class="sig-stamp">
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path id="stamp-bot" d="M 18,100 A 82,82 0 0 0 182,100" fill="none"/>
+  </defs>
+  <circle cx="100" cy="100" r="95" fill="none" stroke="#0C2340" stroke-width="3"/>
+  <circle cx="100" cy="100" r="88" fill="none" stroke="#0C2340" stroke-width="1.2"/>
 
-        const taunts = [
-            "Nice try!",
-            "Almost had it...",
-            "Too slow!",
-            "You really thought?",
-            "Nope.",
-            "Not today!",
-            "Maybe contact the admin instead?",
-            "I can do this all day.",
-            "Getting tired yet?",
-            "Just click Contact Admin already!",
-            "Seriously?",
-            "This button has trust issues.",
-            "404: Unlock not found.",
-            "Permission denied... forever.",
-            "The button sends its regards."
-        ];
+  <line x1="38" y1="68" x2="162" y2="68" stroke="#0C2340" stroke-width="1.3"/>
+  <line x1="38" y1="98" x2="162" y2="98" stroke="#0C2340" stroke-width="1.3"/>
 
-        function runAway() {
-            attempts++;
+  <text x="100" y="86" font-family="Oswald, Impact, sans-serif" font-size="14" font-weight="700" fill="#0C2340" text-anchor="middle" letter-spacing="1.5" dominant-baseline="middle">DUBAI - U.A.E</text>
 
-            const cardRect = card.getBoundingClientRect();
-            const btnW = btn.offsetWidth;
-            const btnH = btn.offsetHeight;
-            const pad = 10;
+  <text x="28" y="89" font-family="Arial, sans-serif" font-size="16" fill="#0C2340" text-anchor="middle">&#9733;</text>
+  <text x="172" y="89" font-family="Arial, sans-serif" font-size="16" fill="#0C2340" text-anchor="middle">&#9733;</text>
 
-            // Available space inside the card
-            const minX = pad;
-            const minY = pad;
-            const maxX = cardRect.width - btnW - pad;
-            const maxY = cardRect.height - btnH - pad;
+  <text font-family="Oswald, Impact, sans-serif" font-size="13" font-weight="700" fill="#0C2340" letter-spacing="2">
+    <textPath href="#stamp-bot" startOffset="50%" text-anchor="middle">SAFA AL QUDRA TECHNICAL SERVICES</textPath>
+  </text>
+</svg>
+</div>
+    </div>
+  </div>
+  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span></div>
+</div>
 
-            const oldX = btn.offsetLeft;
-            const oldY = btn.offsetTop;
+<\!-- ===== PAGE 3: TABLE OF CONTENTS ===== -->
+<div class="page">
+  <div class="page-header"><img class="header-logo" src="images/sig_3.png" alt="SAQ"><div class="header-text"><strong>SAFA AL QUDRA</strong> TECHNICAL SERVICES</div></div>
+  <div class="page-body">
+    <div class="section-title-bar"><span class="section-num">&equiv;</span><h2>TABLE OF CONTENTS</h2></div>
+    <ul class="toc-list">
+      <li class="toc-item"><span class="toc-num">01</span><span class="toc-label">Message from the CEO</span></li>
+      <li class="toc-item"><span class="toc-num">02</span><span class="toc-label">About the Company</span></li>
+      <li class="toc-item"><span class="toc-num">03</span><span class="toc-label">Company Services</span></li>
+      <li class="toc-item"><span class="toc-num">04</span><span class="toc-label">Associated Systems &amp; Partners</span></li>
+      <li class="toc-item"><span class="toc-num">05</span><span class="toc-label">Project Execution Process</span></li>
+      <li class="toc-item"><span class="toc-num">06</span><span class="toc-label">Completed / Ongoing Projects</span></li>
+      <li class="toc-item"><span class="toc-num">07</span><span class="toc-label">Factory Layout &amp; Machinery</span></li>
+      <li class="toc-item"><span class="toc-num">08</span><span class="toc-label">Health, Safety &amp; Environment (HSE)</span></li>
+      <li class="toc-item"><span class="toc-num">09</span><span class="toc-label">Contact Information</span></li>
+    </ul>
+  </div>
+  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span></div>
+</div>
 
-            let newX, newY, dist, tries = 0;
-            do {
-                newX = minX + Math.random() * (maxX - minX);
-                newY = minY + Math.random() * (maxY - minY);
-                dist = Math.sqrt((newX - oldX) ** 2 + (newY - oldY) ** 2);
-                tries++;
-            } while (dist < 80 && tries < 30);
+<\!-- ===== PAGE 4: ABOUT ===== -->
+<div class="page">
+  <div class="page-header"><img class="header-logo" src="images/sig_4.png" alt="SAQ"><div class="header-text"><strong>SAFA AL QUDRA</strong> TECHNICAL SERVICES</div></div>
+  <div class="page-body">
+    <div class="section-title-bar"><span class="section-num">02</span><h2>ABOUT THE COMPANY</h2></div>
+    <img src="images/sig_5.png" class="about-logo" alt="SAQ Logo">
+    <p class="about-text">We take pleasure in introducing SAFA AL QUDRA, which was established year 2024 Mid of the year with a new name from AAK technical contracting. Our company's objective is "To provide our customers the best engineered products made with personal attention &amp; specialized machinery to form the best latest designs, and to present our customers with the best end-result.</p>
+    <div class="about-slogans">
+      <div class="s1">"Quality Earns Respect"</div>
+      <div class="s2">WE DELIVER WHAT WE PROMISE</div>
+    </div>
+    <p class="about-text">Over the past four decades, we have gone through massive engineering and newer designs. Clubbing all this together along with hard work of our employees, we were able to introduce the latest designs suitable for our customer satisfaction. Today our company reached a point, where it ensures the best quality product deliverance to the customers at competitive price. We even have an in-house designing facility in order to supply around the hour technical advice to match the customer requirement; we serve invariantly to every part of the country with our company products.</p>
+    <div class="info-box mission"><strong>Mission:</strong> Our mission is to be the number one aluminum and Glass Company / Fa&ccedil;ade works as well as the steel structure fabrication, supply and installation works, stainless steel furniture indoor and outdoor in the region selling the highest quality products available and giving the most customer satisfaction. Therefore, we joined up with the best Aluminum, glass and steel suppliers to meet our customer's satisfaction.</div>
+    <div class="info-box vision"><strong>Vision:</strong> Our vision is to hand over any project with the best quality assurance, and to be recognized as one of the top players in the market.</div>
+    <p class="about-web"><b>www.saqtechnicalservices.com</b> &bull; SAQ Technical Services &bull; Aluminum, Glass &amp; Metal Experts</p>
+  </div>
+  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span></div>
+</div>
 
-            btn.style.left = newX + 'px';
-            btn.style.top = newY + 'px';
-            btn.style.transform = 'none';
+<\!-- ===== PAGE 5: SERVICES ===== -->
+<div class="page">
+  <div class="page-header"><img class="header-logo" src="images/sig_6.png" alt="SAQ"><div class="header-text"><strong>SAFA AL QUDRA</strong> TECHNICAL SERVICES</div></div>
+  <div class="page-body">
+    <div class="section-title-bar"><span class="section-num">03</span><h2>COMPANY SERVICES</h2></div>
+    <div class="sub-header">Aluminium Projects Section</div>
+    <div class="svc-grid">
+      <div class="svc-item">Curtain Walls system (Conventional system)</div>
+      <div class="svc-item">Folding door system</div>
+      <div class="svc-item">Sliding door system</div>
+      <div class="svc-item">Structural glazing system</div>
+      <div class="svc-item">Skylight</div>
+      <div class="svc-item">Aluminium Composite Panel (Cladding Panel)</div>
+      <div class="svc-item">Aluminium Hand Rails</div>
+      <div class="svc-item">Glass balustrade</div>
+      <div class="svc-item">Windows</div>
+      <div class="svc-item">Canopies</div>
+      <div class="svc-item">Automatic Swing doors</div>
+      <div class="svc-item">Automatic and manual Revolving doors</div>
+      <div class="svc-item">Automatic Sliding doors</div>
+      <div class="svc-item">Spider Glass system</div>
+      <div class="svc-item">Frameless glass system</div>
+      <div class="svc-item">Mirrors</div>
+      <div class="svc-item">Swimming pool glass installation</div>
+      <div class="svc-item">Aluminum pergolas</div>
+      <div class="svc-item">Glass rooms</div>
+      <div class="svc-item">Outdoor service blocks</div>
+      <div class="svc-item">Aluminum sandwich panels</div>
+      <div class="svc-item">Glass shower partitions</div>
+      <div class="svc-item">Aluminum / Mashribia sliding entrance gate</div>
+    </div>
+    <div class="sub-header" style="margin-top:5mm;">Steel Division</div>
+    <div class="svc-grid">
+      <div class="svc-item">MS structure I beam &amp; H beam fabrication supply and installation</div>
+      <div class="svc-item">MS structure Box section rectangular / square / angular fabrication supply and installation</div>
+      <div class="svc-item">Stainless steel furniture</div>
+      <div class="svc-item">Stainless steel fabrication, supply and installation</div>
+      <div class="svc-item">Steel canopies</div>
+      <div class="svc-item">Steel pergolas</div>
+      <div class="svc-item">Steel structure for deck slab</div>
+      <div class="svc-item">Warehouse steel structure</div>
+      <div class="svc-item">Industrial steel structure</div>
+      <div class="svc-item">MS structure for aluminium / glass canopies / pergolas / skylights</div>
+      <div class="svc-item">MS dome covered with S.S / Aluminium cladding</div>
+      <div class="svc-item">Mashribia Design</div>
+      <div class="svc-item">MS sliding entrance gate</div>
+    </div>
+  </div>
+  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span></div>
+</div>
 
-            // Shake the lock
-            lock.classList.remove('shake');
-            void lock.offsetWidth;
-            lock.classList.add('shake');
+<\!-- ===== PAGE 6: PARTNERS ===== -->
+<div class="page">
+  <div class="page-header"><img class="header-logo" src="images/sig_7.png" alt="SAQ"><div class="header-text"><strong>SAFA AL QUDRA</strong> TECHNICAL SERVICES</div></div>
+  <div class="page-body">
+    <div class="section-title-bar"><span class="section-num">04</span><h2>ASSOCIATED SYSTEMS &amp; PARTNERS</h2></div>
+    <p class="about-text">We have partnered up with the highest brands of Aluminum, Glass and steel suppliers to present to the end user the best quality assurance possible.</p>
+    <div class="sub-header">Aluminum System Partners</div>
+    <div class="partner-grid">
+      <div class="partner-card">Gulf Extrusion</div>
+      <div class="partner-card">Emirates Extrusion</div>
+      <div class="partner-card">Al Ghurair Extrusion</div>
+      <div class="partner-card">National Aluminum Company Oman</div>
+      <div class="partner-card">Al Jaber Extrusion</div>
+      <div class="partner-card">Elite Extrusion</div>
+      <div class="partner-card">ESC Aluminum System (Germany)</div>
+      <div class="partner-card">Sucho System</div>
+      <div class="partner-card">Gutman System</div>
+      <div class="partner-card">Alumil System</div>
+    </div>
+    <div class="sub-header">Glass Range</div>
+    <p class="about-text">They can meet any project specifications with their unique researches on glass. The range includes but is not limited to:</p>
+    <div class="glass-list">
+      <div class="glass-item">Tinted Glass with Unique colors</div>
+      <div class="glass-item">Reflective Glass with Unique colors</div>
+      <div class="glass-item">Low-E Glass</div>
+      <div class="glass-item">Laminated Glass</div>
+      <div class="glass-item">Sandblast Glass</div>
+      <div class="glass-item">Ceramic Frit Glass</div>
+      <div class="glass-item">Painted Glass</div>
+    </div>
+    <div class="logo-strip">
+      <img src="images/sig_8.jpeg" alt="Partner"><img src="images/sig_9.jpeg" alt="Partner"><img src="images/sig_10.jpeg" alt="Partner"><img src="images/sig_11.jpeg" alt="Partner"><img src="images/sig_12.jpeg" alt="Partner"><img src="images/sig_13.jpeg" alt="Partner">
+    </div>
+  </div>
+  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span></div>
+</div>
 
-            // Taunt
-            tauntEl.textContent = taunts[Math.min(attempts - 1, taunts.length - 1)];
+<\!-- ===== PAGE 7: PROCESS (PART 1) ===== -->
+<div class="page">
+  <div class="page-header"><img class="header-logo" src="images/sig_14.png" alt="SAQ"><div class="header-text"><strong>SAFA AL QUDRA</strong> TECHNICAL SERVICES</div></div>
+  <div class="page-body">
+    <div class="section-title-bar"><span class="section-num">05</span><h2>PROJECT EXECUTION PROCESS</h2></div>
+    <div class="process-step"><div class="step-num">01</div><div><div class="step-title">Quotation and Value Engineering</div><div class="step-desc">Understanding the project and its component is the major contributor to success, therefore at SAFA AL QUDRA projects our team of engineers convenes to analyze the specifications, outline the products, avail resources. Enhance performance and system function in order to quote the best value for the best product that match and serve specification.</div></div></div>
+    <div class="process-step"><div class="step-num">02</div><div><div class="step-title">Order Approval and Planning</div><div class="step-desc">Once order approved the team at SAFA AL QUDRA immediately start planning and scheduling for the project along the line schedule of the General Contracts using MS Projects software tools. This process starts by submitting the project schedule, to GC and obtain approval of Consultant and GCC.</div></div></div>
+    <div class="process-step"><div class="step-num">03</div><div><div class="step-title">Submittals and Approvals</div><div class="step-desc">It is very important to identify the system to be used and its components to consultant / architect and obtain approvals prior to procurement, so this process involve submittal of system samples, accessories, hardware, and glass that meet or exceed the project specifications, supported by manufacturer catalogue and products description or performance.</div></div></div>
+    <div class="process-step"><div class="step-num">04</div><div><div class="step-title">Shop Drawings and Material Procurement</div><div class="step-desc">Shop is our art of design at SAFA AL QUDRA project, our qualified engineers are so articulate about drawing the best design that produce state of art building complying with the architect outlines and elevations. Submittals of shop drawings come in phases that concurrent in line of project schedule, and the same is true for consultant approvals. On a parallel track our procurement of material starts and our purchasing team work professionally to secure all materials at the time ready for fabrication to ensure complete delivery and proper installation.</div></div></div>
+    <div class="submittal-row">
+      <div><img src="images/sig_15.jpeg" alt="Cross Sample"><div class="submittal-label">Cross Sample</div></div>
+      <div><img src="images/sig_16.jpeg" alt="Board of Accessories"><div class="submittal-label">Board of Accessories</div></div>
+      <div><img src="images/sig_17.jpeg" alt="300 x 300"><div class="submittal-label">300 x 300</div></div>
+    </div>
+  </div>
+  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span></div>
+</div>
 
-            // Shrink after 5 attempts
-            if (attempts > 5) {
-                const scale = Math.max(0.6, 1 - (attempts - 5) * 0.05);
-                btn.style.transform = 'scale(' + scale + ')';
-            }
+<\!-- ===== PAGE 8: PROCESS (PART 2) ===== -->
+<div class="page">
+  <div class="page-header"><img class="header-logo" src="images/sig_18.png" alt="SAQ"><div class="header-text"><strong>SAFA AL QUDRA</strong> TECHNICAL SERVICES</div></div>
+  <div class="page-body">
+    <h2 class="cont-header">PROJECT EXECUTION PROCESS (CONTINUED)</h2>
+    <div class="process-step"><div class="step-num">05</div><div><div class="step-title">Fabrication</div><div class="step-desc">Having received a detailed cutting list from the design team, our fabrication with state-of-the-art machinery, will insure the best quality on the given time period for production.</div></div></div>
+    <div class="process-step"><div class="step-num">06</div><div><div class="step-title">QA/QC</div><div class="step-desc">QA/QC is the one and only important issue in SAFA AL QUDRA "Quality Earns Respect" is our slogan and we stand by saying that. We have a full cycle to ensure the best quality for the client and the end user. We Guarantee our work 100%</div></div></div>
+    <div class="process-step"><div class="step-num">07</div><div><div class="step-title">Project Management and Team Selection</div><div class="step-desc">Understanding the project and selecting the proper team and equipment is the core of successful management at SAFA AL QUDRA project we carefully select our team of qualified installer and experience supervisors that cater to Safety, QA/QC, and proper implementation of the approved shop drawings. Progress of our projects are monitored daily by upper management, and randomly inspected at site to gain customer confidence and solve any problem that might arise at installation process.</div></div></div>
+    <div class="process-step"><div class="step-num">08</div><div><div class="step-title">Completing and Handing Over</div><div class="step-desc">Upon completion, our QA/QC engineer prepares a checklist and review it with project manager / supervisor for completion. Upon receiving the signed H/O document our commercial department, send the warranty certificate to GC as a completion of the project. Depending on project size a team organization chart is usually submitted to GC and Consultant for approval.</div></div></div>
+  </div>
+  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span></div>
+</div>
 
-            // Vanish after 15
-            if (attempts >= 15) {
-                btn.style.display = 'none';
-                tauntEl.textContent = "The button has left the chat. Contact the admin.";
-            }
-        }
-    </script>
+<\!-- ===== PROJECTS PORTFOLIO PAGES ===== -->
+<div class="page">
+  <div class="page-header"><img class="header-logo" src="images/sig_19.png" alt="SAQ"><div class="header-text"><strong>SAFA AL QUDRA</strong> TECHNICAL SERVICES</div></div>
+  <div class="page-body">
+    <div class="section-title-bar" style="margin-bottom:3mm;"><span class="section-num">06</span><h2>COMPLETED / ONGOING PROJECTS</h2></div>
+
+    <div class="proj-grid"><div class="proj-card">
+  <div class="proj-img-wrap"><img src="images/sig_20.jpeg" alt="Car Parking Shed"></div>
+  <div class="proj-info">
+    <div class="proj-name">Car Parking Shed</div>
+    
+    <div class="proj-client"><span>Client:</span> Private Client</div>
+  </div>
+</div>
+<div class="proj-card">
+  <div class="proj-img-wrap"><img src="images/sig_21.jpeg" alt="Aluminum Sliding Gate Operated with Remote"></div>
+  <div class="proj-info">
+    <div class="proj-name">Aluminum Sliding Gate Operated with Remote</div>
+    
+    <div class="proj-client"><span>Client:</span> Private Client</div>
+  </div>
+</div>
+<div class="proj-card">
+  <div class="proj-img-wrap"><img src="images/sig_22.jpeg" alt="Deck Slab Extension"></div>
+  <div class="proj-info">
+    <div class="proj-name">Deck Slab Extension</div>
+    
+    <div class="proj-client"><span>Client:</span> Private Client</div>
+  </div>
+</div>
+<div class="proj-card">
+  <div class="proj-img-wrap"><img src="images/sig_23.jpeg" alt="Warehouse Steel Structure"></div>
+  <div class="proj-info">
+    <div class="proj-name">Warehouse Steel Structure</div>
+    
+    <div class="proj-client"><span>Client:</span> Private Client</div>
+  </div>
+</div>
+</div>
+  </div>
+  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span></div>
+</div>
+<div class="page">
+  <div class="page-header"><img class="header-logo" src="images/sig_24.png" alt="SAQ"><div class="header-text"><strong>SAFA AL QUDRA</strong> TECHNICAL SERVICES</div></div>
+  <div class="page-body">
+    <div class="proj-grid"><div class="proj-card">
+  <div class="proj-img-wrap"><img src="images/sig_25.jpeg" alt="Warehouse Steel Structure"></div>
+  <div class="proj-info">
+    <div class="proj-name">Warehouse Steel Structure</div>
+    
+    <div class="proj-client"><span>Client:</span> Private Client</div>
+  </div>
+</div>
+<div class="proj-card">
+  <div class="proj-img-wrap"><img src="images/sig_26.jpeg" alt="Warehouse Steel Structure"></div>
+  <div class="proj-info">
+    <div class="proj-name">Warehouse Steel Structure</div>
+    
+    <div class="proj-client"><span>Client:</span> Private Client</div>
+  </div>
+</div>
+<div class="proj-card">
+  <div class="proj-img-wrap"><img src="images/sig_27.jpeg" alt="Decorative Mashribiya"></div>
+  <div class="proj-info">
+    <div class="proj-name">Decorative Mashribiya</div>
+    
+    <div class="proj-client"><span>Client:</span> Private Client</div>
+  </div>
+</div>
+<div class="proj-card">
+  <div class="proj-img-wrap"><img src="images/sig_28.jpeg" alt="Decorative Mashribiya"></div>
+  <div class="proj-info">
+    <div class="proj-name">Decorative Mashribiya</div>
+    
+    <div class="proj-client"><span>Client:</span> Private Client</div>
+  </div>
+</div>
+</div>
+  </div>
+  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span></div>
+</div>
+<div class="page">
+  <div class="page-header"><img class="header-logo" src="images/sig_29.png" alt="SAQ"><div class="header-text"><strong>SAFA AL QUDRA</strong> TECHNICAL SERVICES</div></div>
+  <div class="page-body">
+    <div class="proj-grid"><div class="proj-card">
+  <div class="proj-img-wrap"><img src="images/sig_30.jpeg" alt="Skylight Structure"></div>
+  <div class="proj-info">
+    <div class="proj-name">Skylight Structure</div>
+    
+    <div class="proj-client"><span>Client:</span> Private Client</div>
+  </div>
+</div>
+<div class="proj-card">
+  <div class="proj-img-wrap"><img src="images/sig_31.jpeg" alt="Skylight Structure"></div>
+  <div class="proj-info">
+    <div class="proj-name">Skylight Structure</div>
+    
+    <div class="proj-client"><span>Client:</span> Private Client</div>
+  </div>
+</div>
+<div class="proj-card">
+  <div class="proj-img-wrap"><img src="images/sig_32.jpeg" alt="MS Canopies Covered with ACP"></div>
+  <div class="proj-info">
+    <div class="proj-name">MS Canopies Covered with ACP</div>
+    
+    <div class="proj-client"><span>Client:</span> Private Client</div>
+  </div>
+</div>
+<div class="proj-card">
+  <div class="proj-img-wrap"><img src="images/sig_33.jpeg" alt="Decorative Mashribiya"></div>
+  <div class="proj-info">
+    <div class="proj-name">Decorative Mashribiya</div>
+    
+    <div class="proj-client"><span>Client:</span> Private Client</div>
+  </div>
+</div>
+</div>
+  </div>
+  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span></div>
+</div>
+<div class="page">
+  <div class="page-header"><img class="header-logo" src="images/sig_34.png" alt="SAQ"><div class="header-text"><strong>SAFA AL QUDRA</strong> TECHNICAL SERVICES</div></div>
+  <div class="page-body">
+    <div class="proj-grid"><div class="proj-card">
+  <div class="proj-img-wrap"><img src="images/sig_35.jpeg" alt="Water Feature"></div>
+  <div class="proj-info">
+    <div class="proj-name">Water Feature</div>
+    <div class="proj-loc"><span>Location:</span> MBR Dubai</div>
+    <div class="proj-client"><span>Client:</span> Private Client</div>
+  </div>
+</div>
+<div class="proj-card">
+  <div class="proj-img-wrap"><img src="images/sig_36.jpeg" alt="Decorative CNC Perforated Sheet"></div>
+  <div class="proj-info">
+    <div class="proj-name">Decorative CNC Perforated Sheet</div>
+    <div class="proj-loc"><span>Location:</span> Grand Views Maydan Dubai</div>
+    <div class="proj-client"><span>Client:</span> Private Client</div>
+  </div>
+</div>
+<div class="proj-card">
+  <div class="proj-img-wrap"><img src="images/sig_37.jpeg" alt="Swimming Pool Glass Fence"></div>
+  <div class="proj-info">
+    <div class="proj-name">Swimming Pool Glass Fence</div>
+    <div class="proj-loc"><span>Location:</span> Dubai Hills Sidra 1</div>
+    <div class="proj-client"><span>Client:</span> Private Client</div>
+  </div>
+</div>
+<div class="proj-card">
+  <div class="proj-img-wrap"><img src="images/sig_38.jpeg" alt="Outdoor Area Shower Partition"></div>
+  <div class="proj-info">
+    <div class="proj-name">Outdoor Area Shower Partition</div>
+    <div class="proj-loc"><span>Location:</span> Grand Views Maydan Dubai</div>
+    <div class="proj-client"><span>Client:</span> Private Client</div>
+  </div>
+</div>
+</div>
+  </div>
+  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span></div>
+</div>
+<div class="page">
+  <div class="page-header"><img class="header-logo" src="images/sig_39.png" alt="SAQ"><div class="header-text"><strong>SAFA AL QUDRA</strong> TECHNICAL SERVICES</div></div>
+  <div class="page-body">
+    <div class="proj-grid"><div class="proj-card">
+  <div class="proj-img-wrap"><img src="images/sig_40.jpeg" alt="Extended Skylight"></div>
+  <div class="proj-info">
+    <div class="proj-name">Extended Skylight</div>
+    <div class="proj-loc"><span>Location:</span> Grand Views Maydan Dubai</div>
+    <div class="proj-client"><span>Client:</span> Private Client</div>
+  </div>
+</div>
+<div class="proj-card">
+  <div class="proj-img-wrap"><img src="images/sig_41.jpeg" alt="Extended Skylight with Glass Top and Front"></div>
+  <div class="proj-info">
+    <div class="proj-name">Extended Skylight with Glass Top and Front</div>
+    <div class="proj-loc"><span>Location:</span> Grand Views Maydan Dubai</div>
+    <div class="proj-client"><span>Client:</span> Private Client</div>
+  </div>
+</div>
+<div class="proj-card">
+  <div class="proj-img-wrap"><img src="images/sig_42.jpeg" alt="Wall Mirrors"></div>
+  <div class="proj-info">
+    <div class="proj-name">Wall Mirrors</div>
+    <div class="proj-loc"><span>Location:</span> Dubai Hills Sidra 3</div>
+    <div class="proj-client"><span>Client:</span> Private Client</div>
+  </div>
+</div>
+<div class="proj-card">
+  <div class="proj-img-wrap"><img src="images/sig_43.jpeg" alt="Ceiling Mirrors"></div>
+  <div class="proj-info">
+    <div class="proj-name">Ceiling Mirrors</div>
+    <div class="proj-loc"><span>Location:</span> Dubai Hills Sidra 3</div>
+    <div class="proj-client"><span>Client:</span> Private Client</div>
+  </div>
+</div>
+</div>
+  </div>
+  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span></div>
+</div>
+<div class="page">
+  <div class="page-header"><img class="header-logo" src="images/sig_44.png" alt="SAQ"><div class="header-text"><strong>SAFA AL QUDRA</strong> TECHNICAL SERVICES</div></div>
+  <div class="page-body">
+    <div class="proj-grid"><div class="proj-card">
+  <div class="proj-img-wrap"><img src="images/sig_45.jpeg" alt="Aluminum Pergola"></div>
+  <div class="proj-info">
+    <div class="proj-name">Aluminum Pergola</div>
+    <div class="proj-loc"><span>Location:</span> Grand Views Maydan Dubai</div>
+    <div class="proj-client"><span>Client:</span> Private Client</div>
+  </div>
+</div>
+<div class="proj-card">
+  <div class="proj-img-wrap"><img src="images/sig_46.jpeg" alt="Aluminum Pergola Covered with Glass"></div>
+  <div class="proj-info">
+    <div class="proj-name">Aluminum Pergola Covered with Glass</div>
+    <div class="proj-loc"><span>Location:</span> Palm Jumeirah Dubai</div>
+    <div class="proj-client"><span>Client:</span> Private Client</div>
+  </div>
+</div>
+<div class="proj-card">
+  <div class="proj-img-wrap"><img src="images/sig_47.jpeg" alt="Aluminum Pergola with Aluminum Perforated Sheet"></div>
+  <div class="proj-info">
+    <div class="proj-name">Aluminum Pergola with Aluminum Perforated Sheet</div>
+    <div class="proj-loc"><span>Location:</span> Millennium States Maydan Dubai</div>
+    <div class="proj-client"><span>Client:</span> Private Client</div>
+  </div>
+</div>
+<div class="proj-card">
+  <div class="proj-img-wrap"><img src="images/sig_48.jpeg" alt="Vertical Louvers, Fixed Louvers and Retractable Pergola"></div>
+  <div class="proj-info">
+    <div class="proj-name">Vertical Louvers, Fixed Louvers and Retractable Pergola</div>
+    <div class="proj-loc"><span>Location:</span> Palm Jumeirah Dubai</div>
+    <div class="proj-client"><span>Client:</span> Private Client</div>
+  </div>
+</div>
+</div>
+  </div>
+  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span></div>
+</div>
+<div class="page">
+  <div class="page-header"><img class="header-logo" src="images/sig_49.png" alt="SAQ"><div class="header-text"><strong>SAFA AL QUDRA</strong> TECHNICAL SERVICES</div></div>
+  <div class="page-body">
+    <div class="proj-grid"><div class="proj-card">
+  <div class="proj-img-wrap"><img src="images/sig_50.jpeg" alt="Vertical Louvers, Fixed Louvers and Retractable Pergola"></div>
+  <div class="proj-info">
+    <div class="proj-name">Vertical Louvers, Fixed Louvers and Retractable Pergola</div>
+    <div class="proj-loc"><span>Location:</span> Palm Jumeirah Dubai</div>
+    <div class="proj-client"><span>Client:</span> Private Client</div>
+  </div>
+</div>
+<div class="proj-card">
+  <div class="proj-img-wrap"><img src="images/sig_51.jpeg" alt="Free Stand Aluminum Pergolas, Swimming Pool Glass"></div>
+  <div class="proj-info">
+    <div class="proj-name">Free Stand Aluminum Pergolas, Swimming Pool Glass</div>
+    <div class="proj-loc"><span>Location:</span> Palm Jumeirah Dubai</div>
+    <div class="proj-client"><span>Client:</span> Private Client</div>
+  </div>
+</div>
+<div class="proj-card">
+  <div class="proj-img-wrap"><img src="images/sig_52.jpeg" alt="Free Stand Aluminum Pergolas, Swimming Pool Glass"></div>
+  <div class="proj-info">
+    <div class="proj-name">Free Stand Aluminum Pergolas, Swimming Pool Glass</div>
+    <div class="proj-loc"><span>Location:</span> Palm Jumeirah Dubai</div>
+    <div class="proj-client"><span>Client:</span> Private Client</div>
+  </div>
+</div>
+<div class="proj-card">
+  <div class="proj-img-wrap"><img src="images/sig_53.jpeg" alt="Free Stand Aluminum Pergolas, Swimming Pool Glass"></div>
+  <div class="proj-info">
+    <div class="proj-name">Free Stand Aluminum Pergolas, Swimming Pool Glass</div>
+    <div class="proj-loc"><span>Location:</span> Palm Jumeirah Dubai</div>
+    <div class="proj-client"><span>Client:</span> Private Client</div>
+  </div>
+</div>
+</div>
+  </div>
+  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span></div>
+</div>
+<div class="page">
+  <div class="page-header"><img class="header-logo" src="images/sig_54.png" alt="SAQ"><div class="header-text"><strong>SAFA AL QUDRA</strong> TECHNICAL SERVICES</div></div>
+  <div class="page-body">
+    <div class="proj-grid"><div class="proj-card">
+  <div class="proj-img-wrap"><img src="images/sig_55.jpeg" alt="Free Stand Aluminum Pergolas, Swimming Pool Glass"></div>
+  <div class="proj-info">
+    <div class="proj-name">Free Stand Aluminum Pergolas, Swimming Pool Glass</div>
+    <div class="proj-loc"><span>Location:</span> Palm Jumeirah Dubai</div>
+    <div class="proj-client"><span>Client:</span> Private Client</div>
+  </div>
+</div>
+<div class="proj-card">
+  <div class="proj-img-wrap"><img src="images/sig_56.jpeg" alt="Free Stand Aluminum Pergolas, Swimming Pool Glass"></div>
+  <div class="proj-info">
+    <div class="proj-name">Free Stand Aluminum Pergolas, Swimming Pool Glass</div>
+    <div class="proj-loc"><span>Location:</span> Palm Jumeirah Dubai</div>
+    <div class="proj-client"><span>Client:</span> Private Client</div>
+  </div>
+</div>
+<div class="proj-card">
+  <div class="proj-img-wrap"><img src="images/sig_57.jpeg" alt="Cantilevered Aluminum Pergola"></div>
+  <div class="proj-info">
+    <div class="proj-name">Cantilevered Aluminum Pergola</div>
+    <div class="proj-loc"><span>Location:</span> Palm Jumeirah Dubai</div>
+    <div class="proj-client"><span>Client:</span> Private Client</div>
+  </div>
+</div>
+<div class="proj-card">
+  <div class="proj-img-wrap"><img src="images/sig_58.jpeg" alt="Cantilevered Aluminum Pergola"></div>
+  <div class="proj-info">
+    <div class="proj-name">Cantilevered Aluminum Pergola</div>
+    <div class="proj-loc"><span>Location:</span> Palm Jumeirah Dubai</div>
+    <div class="proj-client"><span>Client:</span> Private Client</div>
+  </div>
+</div>
+</div>
+  </div>
+  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span></div>
+</div>
+<div class="page">
+  <div class="page-header"><img class="header-logo" src="images/sig_59.png" alt="SAQ"><div class="header-text"><strong>SAFA AL QUDRA</strong> TECHNICAL SERVICES</div></div>
+  <div class="page-body">
+    <div class="proj-grid"><div class="proj-card">
+  <div class="proj-img-wrap"><img src="images/sig_60.jpeg" alt="Aluminum Pergolas and Canopies"></div>
+  <div class="proj-info">
+    <div class="proj-name">Aluminum Pergolas and Canopies</div>
+    <div class="proj-loc"><span>Location:</span> Palm Jumeirah Dubai</div>
+    <div class="proj-client"><span>Client:</span> Private Client</div>
+  </div>
+</div>
+<div class="proj-card">
+  <div class="proj-img-wrap"><img src="images/sig_61.jpeg" alt="Aluminum Pergolas and Canopy"></div>
+  <div class="proj-info">
+    <div class="proj-name">Aluminum Pergolas and Canopy</div>
+    <div class="proj-loc"><span>Location:</span> Palm Jumeirah Dubai</div>
+    <div class="proj-client"><span>Client:</span> Private Client</div>
+  </div>
+</div>
+<div class="proj-card">
+  <div class="proj-img-wrap"><img src="images/sig_62.jpeg" alt="Stainless Steel Decorative Works"></div>
+  <div class="proj-info">
+    <div class="proj-name">Stainless Steel Decorative Works</div>
+    <div class="proj-loc"><span>Location:</span> JBR Dubai</div>
+    <div class="proj-client"><span>Client:</span> Private Client</div>
+  </div>
+</div>
+<div class="proj-card">
+  <div class="proj-img-wrap"><img src="images/sig_63.jpeg" alt="Stainless Steel Decorative Works"></div>
+  <div class="proj-info">
+    <div class="proj-name">Stainless Steel Decorative Works</div>
+    <div class="proj-loc"><span>Location:</span> JBR Dubai</div>
+    <div class="proj-client"><span>Client:</span> Private Client</div>
+  </div>
+</div>
+</div>
+  </div>
+  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span></div>
+</div>
+<div class="page">
+  <div class="page-header"><img class="header-logo" src="images/sig_64.png" alt="SAQ"><div class="header-text"><strong>SAFA AL QUDRA</strong> TECHNICAL SERVICES</div></div>
+  <div class="page-body">
+    <div class="proj-grid"><div class="proj-card">
+  <div class="proj-img-wrap"><img src="images/sig_65.jpeg" alt="Stainless Steel Decorative Panel and Console Table"></div>
+  <div class="proj-info">
+    <div class="proj-name">Stainless Steel Decorative Panel and Console Table</div>
+    <div class="proj-loc"><span>Location:</span> JBR Dubai</div>
+    <div class="proj-client"><span>Client:</span> Private Client</div>
+  </div>
+</div>
+<div class="proj-card">
+  <div class="proj-img-wrap"><img src="images/sig_66.jpeg" alt="Stainless Steel Decorative Panel and Console Table"></div>
+  <div class="proj-info">
+    <div class="proj-name">Stainless Steel Decorative Panel and Console Table</div>
+    <div class="proj-loc"><span>Location:</span> JBR Dubai</div>
+    <div class="proj-client"><span>Client:</span> Private Client</div>
+  </div>
+</div>
+<div class="proj-card">
+  <div class="proj-img-wrap"><img src="images/sig_67.jpeg" alt="Dining Table Structure Made by MS and Finish with Stainless Steel"></div>
+  <div class="proj-info">
+    <div class="proj-name">Dining Table Structure Made by MS and Finish with Stainless Steel</div>
+    <div class="proj-loc"><span>Location:</span> JBR Dubai</div>
+    <div class="proj-client"><span>Client:</span> Private Client</div>
+  </div>
+</div>
+<div class="proj-card">
+  <div class="proj-img-wrap"><img src="images/sig_68.jpeg" alt="Dining Table Structure Made by MS and Finish with Stainless Steel"></div>
+  <div class="proj-info">
+    <div class="proj-name">Dining Table Structure Made by MS and Finish with Stainless Steel</div>
+    <div class="proj-loc"><span>Location:</span> JBR Dubai</div>
+    <div class="proj-client"><span>Client:</span> Private Client</div>
+  </div>
+</div>
+</div>
+  </div>
+  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span></div>
+</div>
+
+<\!-- ===== FACTORY & MACHINERY ===== -->
+<div class="page">
+  <div class="page-header"><img class="header-logo" src="images/sig_69.png" alt="SAQ"><div class="header-text"><strong>SAFA AL QUDRA</strong> TECHNICAL SERVICES</div></div>
+  <div class="page-body">
+    <div class="section-title-bar"><span class="section-num">07</span><h2>FACTORY LAYOUT &amp; MACHINERY</h2></div>
+    <p class="about-text" style="margin-bottom:4mm;">Operating with state-of-the-art machinery</p>
+    <div class="machine-grid">
+      <div class="machine-img"><img src="images/sig_70.jpeg" alt="Machinery"></div>
+<div class="machine-img"><img src="images/sig_71.jpeg" alt="Machinery"></div>
+<div class="machine-img"><img src="images/sig_72.jpeg" alt="Machinery"></div>
+<div class="machine-img"><img src="images/sig_73.jpeg" alt="Machinery"></div>
+<div class="machine-img"><img src="images/sig_74.jpeg" alt="Machinery"></div>
+<div class="machine-img"><img src="images/sig_75.jpeg" alt="Machinery"></div>
+<div class="machine-img"><img src="images/sig_76.jpeg" alt="Machinery"></div>
+<div class="machine-img"><img src="images/sig_77.jpeg" alt="Machinery"></div>
+
+    </div>
+  </div>
+  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span></div>
+</div>
+
+<\!-- ===== HSE PAGES ===== -->
+<div class="page">
+  <div class="page-header"><img class="header-logo" src="images/sig_78.png" alt="SAQ"><div class="header-text"><strong>SAFA AL QUDRA</strong> TECHNICAL SERVICES</div></div>
+  <div class="page-body">
+    <div class="section-title-bar"><span class="section-num">08</span><h2>HEALTH, SAFETY & ENVIRONMENT</h2></div>
+    <div class="hse-section"><h3 class="hse-title">Introduction / Foreword</h3><p class="hse-body">This manual is a guide for establishing and maintaining safe working conditions, and for promoting safe work practices by management and employees. We hope that implementing these safety guidelines will set a good example for the entire all.<br><br>We recognize its responsibility to provide a safe and healthful working environment. This shall include making reasonable efforts to promptly investigate and address health and safety issues, not requiring employees to perform tasks that are dangerous to their health and safety without adequate training and safety equipment as determined by applicable state and federal laws, and making information on hazardous materials readily accessible.<br><br>All of us must practice safe work habits at all times. Only a diligent effort on everyone's part will prevent injuries and illnesses.</p></div>
+<div class="hse-section"><h3 class="hse-title">HSE Mission</h3><p class="hse-body">The mission of SAFA AL QUDRA is to work towards the elimination of work place injuries and illnesses. We are determined to:<br>1. Increase attention to training and the capability of the supervisor and worker to identify and deal with work place health and safety hazards.<br>2. Increase the understanding and awareness by all employees of safety and health hazards associated with their jobs.<br>3. Maintain and update the joint Safety Manual.<br>4. Promptly investigate and respond to service maintenance unsafe working conditions forms.<br>5. Study job safety and health analyses of tasks causing the most serious and frequent injuries and illnesses.</p></div>
+<div class="hse-section"><h3 class="hse-title">Unsafe Working Conditions</h3><p class="hse-body">1. Whenever a dangerous working condition exists that requires immediate corrective action, the employee(s) should notify their supervisor at once.<br>2. The Management shall investigate the alleged dangerous condition and render a decision within two (2) working days.<br>3. Where a working condition is thought to be unsafe but does not require immediate corrective action, the employee(s) should fill out Service Maintenance form.<br>4. An employee or group of employees who refuse a work assignment because of a reasonable belief that to perform such work would endanger physical safety should use the expedited complaint procedure.</p></div>
+
+  </div>
+  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span></div>
+</div>
+<div class="page">
+  <div class="page-header"><img class="header-logo" src="images/sig_79.png" alt="SAQ"><div class="header-text"><strong>SAFA AL QUDRA</strong> TECHNICAL SERVICES</div></div>
+  <div class="page-body">
+    <h2 class="cont-header">HSE (CONTINUED)</h2>
+    <div class="hse-section"><h3 class="hse-title">Supervisor's Responsibility</h3><p class="hse-body">1. Provide safety instruction, training and encourage safe work performance.<br>2. Ensure the repair or replacement of all defective equipment.<br>3. Inspect all equipment and tell each employee the proper PPE that must be used.<br>4. Encourage employees safety suggestions.<br>5. Counsel and discipline employees who fail to use required safety equipment.<br>6. Investigate all accidents and complete detailed Accident Report Forms.<br>7. Be aware of all occupational health hazards or toxic substances.<br>8. Request assistance from EH&amp;S where an occupational hazard may exist.<br>9. Ensure new employees receive required physicals and tests.<br>10. Prohibit use of alcoholic beverages and narcotics while on duty.</p></div>
+<div class="hse-section"><h3 class="hse-title">Employee's Responsibility</h3><p class="hse-body">1. Use maximum care and good judgment in preventing accidents and injuries.<br>2. Report unsafe conditions, equipment, practices, and on the job injuries.<br>3. Abide by all safety rules and regulations.<br>4. Understand your supervisor's instructions. If you do not know how to do the job safely, ask questions.<br>5. Do not engage in tasks which you believe might be unsafe without consulting your supervisor.<br>6. Observe all posted warning signs.<br>7. Clean up the work area and equipment upon job completion.<br>8. Before you start work on any electrical system, make a personal inspection.<br>9. Know the substances you work with which are hazardous. Review MSDS.<br>10. The use of alcoholic beverages or narcotics while on duty is prohibited.</p></div>
+<div class="hse-section"><h3 class="hse-title">Eye Protection</h3><p class="hse-body">Eye protection is required for certain jobs and areas of work.<br>1. All employees exposed to flying objects, particles, molten metal, gases, fumes will be provided with appropriate eye protection.<br>2. An eyewash and deluge shower is required where chemical splashes are possible.<br>3. Foreign objects should be removed from an employee's eye only by a qualified person.<br>4. Eye protection equipment is available through your department.</p></div>
+
+  </div>
+  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span></div>
+</div>
+<div class="page">
+  <div class="page-header"><img class="header-logo" src="images/sig_80.png" alt="SAQ"><div class="header-text"><strong>SAFA AL QUDRA</strong> TECHNICAL SERVICES</div></div>
+  <div class="page-body">
+    <h2 class="cont-header">HSE (CONTINUED)</h2>
+    <div class="hse-section"><h3 class="hse-title">Fire Prevention and Safety</h3><p class="hse-body">If a fire or explosion occurs, activate the building evacuation alarm and call the Fire and Emergency number.<br>1. Do not use the elevators. Keep calm; shut off gas and equipment before leaving.<br>2. Stay between your escape route and the fire.<br>3. If your clothing catches fire, stop, drop and roll.<br>4. Everyone should be familiar with the location of fire extinguishers and fire hoses.<br>5. Flammable mixtures must be stored only by approved methods.<br>6. The campus is a smoke-free environment.<br>7. Emergency exits should not be locked or blocked.</p></div>
+<div class="hse-section"><h3 class="hse-title">Protective Clothing & Equipment</h3><p class="hse-body">It is the employee's responsibility to obtain, use, maintain and clean protective equipment.<br>1. Avoid loose fitting clothes. Shirts with sleeves and long pants must be worn.<br>2. Head protection (hard hats) must be worn where there is danger of falling objects.<br>3. Respirators must be used when adequate ventilation cannot be provided. Employee must be fit-tested.<br>4. When entering confined spaces, always bring breathing equipment.</p></div>
+<div class="hse-section"><h3 class="hse-title">Hearing Protection</h3><p class="hse-body">If the noise level in your work area is high, ask your supervisor to request a sound level survey.<br>1. All noise hazard areas should be marked.<br>2. Employees in noise-hazard areas will be provided with hearing protectors and annual training.<br>3. Hearing protection is required when ambient noise is above 85 decibels.</p></div>
+
+  </div>
+  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span></div>
+</div>
+<div class="page">
+  <div class="page-header"><img class="header-logo" src="images/sig_81.png" alt="SAQ"><div class="header-text"><strong>SAFA AL QUDRA</strong> TECHNICAL SERVICES</div></div>
+  <div class="page-body">
+    <h2 class="cont-header">HSE (CONTINUED)</h2>
+    <div class="hse-section"><h3 class="hse-title">Equipment Care and Use</h3><p class="hse-body">Supervisors and employees share the responsibility that equipment and tools are safe.<br>1. All tools and equipment are to be kept in a clean and repaired condition.<br>2. Only trained employees should operate machinery.<br>3. Never exceed the manufacturer's recommended RPM on rotary equipment.<br>4. All rotary machines must be protected by a proper guard.<br>5. Electric tools shall be grounded or double-insulated.<br>6. Use a tool only for the purposes for which it was designed.</p></div>
+<div class="hse-section"><h3 class="hse-title">Moving and Lifting</h3><p class="hse-body">1. Do not attempt to carry a load which is more than you can carry safely; get help.<br>2. Supervisors should see that mechanical equipment is used when manual lifting is unsafe.<br>3. Wipe off all greasy, slippery objects before handling.<br>4. Always lift gradually and smoothly, without jerking or twisting.</p></div>
+<div class="hse-section"><h3 class="hse-title">Ladders</h3><p class="hse-body">Use only ladders in good repair and equipped with safety shoes.<br>1. Report any defects to your supervisor.<br>2. Be sure the ladder is long enough to do the job safely.<br>3. Fiberglass ladders are preferred when working around electrical equipment.<br>4. Never use the top three feet of an extension ladder.</p></div>
+
+  </div>
+  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span></div>
+</div>
+<div class="page">
+  <div class="page-header"><img class="header-logo" src="images/sig_82.png" alt="SAQ"><div class="header-text"><strong>SAFA AL QUDRA</strong> TECHNICAL SERVICES</div></div>
+  <div class="page-body">
+    <h2 class="cont-header">HSE (CONTINUED)</h2>
+    <div class="hse-section"><h3 class="hse-title">Scaffolds</h3><p class="hse-body">Scaffolds and related ropes and lines should be in good repair.<br>1. Where a scaffold is over ten feet high, guardrails and toe boards must be installed.<br>2. Do not install the scaffold in the vicinity of power lines.<br>3. Each worker must wear an approved safety life belt attached to a lifeline.</p></div>
+<div class="hse-section"><h3 class="hse-title">Confined Space Entry</h3><p class="hse-body">A confined space is any enclosed area with limited means of entry which contains known or potential hazards.<br><br>Managers shall: Be responsible for all training; authorize only trained employees to enter; ensure health and safety; monitor the worksite.<br><br>Employees shall: Observe all rules and precautions; enter only after authorization.<br><br>Under no circumstances shall employees: Enter an untested confined space; enter a space known to contain a dangerous atmosphere; enter without authorization.</p></div>
+
+  </div>
+  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span></div>
+</div>
+
+<\!-- ===== CONTACT PAGE ===== -->
+<div class="page">
+  <div class="page-header"><img class="header-logo" src="images/sig_83.png" alt="SAQ"><div class="header-text"><strong>SAFA AL QUDRA</strong> TECHNICAL SERVICES</div></div>
+  <div class="page-body">
+    <div class="contact-center">
+      <img src="images/sig_84.png" class="logo" alt="SAQ Logo">
+      <div class="cover-company" style="color:#0C2340;font-size:22pt;">SAFA AL QUDRA</div>
+      <div class="cover-sub" style="color:#D4A843;font-size:11pt;">TECHNICAL SERVICES</div>
+      <div class="contact-tagline">SAQ Technical Services | Aluminum, Glass &amp; Metal Experts</div>
+      <div class="contact-qer">"Quality Earns Respect"</div>
+      <div class="contact-slogan">WE DELIVER WHAT WE PROMISE</div>
+      <div style="width:50mm;height:2px;background:#D4A843;margin:4mm auto;"></div>
+      <div class="contact-info"><b>Muhammad Nauman Mahmood Khan</b></div>
+      <div class="contact-info" style="color:#D4A843;">CEO, SAQ Technical Services</div>
+      <div style="margin-top:6mm;"></div>
+      <div class="contact-web"><a href="https://www.saqtechnicalservices.com" style="color:inherit;text-decoration:none;">www.saqtechnicalservices.com</a></div>
+      <div class="contact-info" style="margin-top:2mm;"><b>Email:</b> <a href="mailto:info@saqtechnicalservices.com" style="color:inherit;text-decoration:none;">info@saqtechnicalservices.com</a></div>
+      <div class="contact-info" style="margin-top:1mm;"><b>Phone:</b> <a href="tel:+971555640267" style="color:inherit;text-decoration:none;">+971-55-564 0267</a></div>
+      <div class="contact-info" style="margin-top:3mm;">United Arab Emirates</div>
+    </div>
+  </div>
+  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span></div>
+</div>
+
 </body>
 </html>
