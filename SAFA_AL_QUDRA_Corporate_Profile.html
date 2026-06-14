@@ -104,6 +104,19 @@ body {
   overflow: hidden;
 }
 
+body { counter-reset: pageNumber; }
+.page { counter-increment: pageNumber; }
+.page.cover { counter-increment: none; }
+.page-footer { justify-content: flex-start; gap: 6mm; }
+.page-number {
+  margin-left: auto;
+  color: #E8EEF5;
+  font-size: 8pt;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.page-number::before { content: counter(pageNumber); }
+
 /* ===== COVER PAGE ===== */
 .cover {
   background: linear-gradient(160deg, #050E1A 0%, #0C2340 40%, #1B3A5C 100%);
@@ -703,7 +716,7 @@ body {
 </div>
     </div>
   </div>
-  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span></div>
+  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span><span class="page-number"></span></div>
 </div>
 
 <\!-- ===== PAGE 3: TABLE OF CONTENTS ===== -->
@@ -723,7 +736,7 @@ body {
       <li class="toc-item"><span class="toc-num">09</span><span class="toc-label">Contact Information</span></li>
     </ul>
   </div>
-  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span></div>
+  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span><span class="page-number"></span></div>
 </div>
 
 <\!-- ===== PAGE 4: ABOUT ===== -->
@@ -742,7 +755,7 @@ body {
     <div class="info-box vision"><strong>Vision:</strong> Our vision is to hand over any project with the best quality assurance, and to be recognized as one of the top players in the market.</div>
     <p class="about-web"><b>www.saqtechnicalservices.com</b> &bull; SAQ Technical Services &bull; Aluminum, Glass &amp; Metal Experts</p>
   </div>
-  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span></div>
+  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span><span class="page-number"></span></div>
 </div>
 
 <\!-- ===== PAGE 5: SERVICES ===== -->
@@ -793,7 +806,7 @@ body {
       <div class="svc-item">MS sliding entrance gate</div>
     </div>
   </div>
-  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span></div>
+  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span><span class="page-number"></span></div>
 </div>
 
 <\!-- ===== PAGE 6: PARTNERS ===== -->
@@ -848,7 +861,7 @@ body {
       </div>
     </div>
   </div>
-  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span></div>
+  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span><span class="page-number"></span></div>
 </div>
 
 <\!-- ===== PAGE 7: PROCESS (PART 1) ===== -->
@@ -866,7 +879,7 @@ body {
       <div><img src="images/corp_17.jpeg" alt="300 x 300"><div class="submittal-label">300 x 300</div></div>
     </div>
   </div>
-  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span></div>
+  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span><span class="page-number"></span></div>
 </div>
 
 <\!-- ===== PAGE 8: PROCESS (PART 2) ===== -->
@@ -879,7 +892,7 @@ body {
     <div class="process-step"><div class="step-num">07</div><div><div class="step-title">Project Management and Team Selection</div><div class="step-desc">Understanding the project and selecting the proper team and equipment is the core of successful management at SAFA AL QUDRA project we carefully select our team of qualified installer and experience supervisors that cater to Safety, QA/QC, and proper implementation of the approved shop drawings. Progress of our projects are monitored daily by upper management, and randomly inspected at site to gain customer confidence and solve any problem that might arise at installation process.</div></div></div>
     <div class="process-step"><div class="step-num">08</div><div><div class="step-title">Completing and Handing Over</div><div class="step-desc">Upon completion, our QA/QC engineer prepares a checklist and review it with project manager / supervisor for completion. Upon receiving the signed H/O document our commercial department, send the warranty certificate to GC as a completion of the project. Depending on project size a team organization chart is usually submitted to GC and Consultant for approval.</div></div></div>
   </div>
-  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span></div>
+  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span><span class="page-number"></span></div>
 </div>
 
 <\!-- ===== PROJECTS PORTFOLIO PAGES ===== -->
@@ -922,7 +935,7 @@ body {
 </div>
 </div>
   </div>
-  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span></div>
+  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span><span class="page-number"></span></div>
 </div>
 <div class="page">
   <div class="page-header"><img class="header-logo" src="images/corp_24.png" alt="SAQ"><div class="header-text"><strong>SAFA AL QUDRA</strong> TECHNICAL SERVICES</div></div>
@@ -961,7 +974,7 @@ body {
 </div>
 </div>
   </div>
-  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span></div>
+  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span><span class="page-number"></span></div>
 </div>
 <div class="page">
   <div class="page-header"><img class="header-logo" src="images/corp_29.png" alt="SAQ"><div class="header-text"><strong>SAFA AL QUDRA</strong> TECHNICAL SERVICES</div></div>
@@ -1000,85 +1013,7 @@ body {
 </div>
 </div>
   </div>
-  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span></div>
-</div>
-<div class="page">
-  <div class="page-header"><img class="header-logo" src="images/corp_34.png" alt="SAQ"><div class="header-text"><strong>SAFA AL QUDRA</strong> TECHNICAL SERVICES</div></div>
-  <div class="page-body">
-    <div class="proj-grid"><div class="proj-card">
-  <div class="proj-img-wrap"><img src="images/corp_35.jpeg" alt="Water Feature"></div>
-  <div class="proj-info">
-    <div class="proj-name">Water Feature</div>
-    <div class="proj-loc"><span>Location:</span> MBR Dubai</div>
-    <div class="proj-client"><span>Client:</span> Private Client</div>
-  </div>
-</div>
-<div class="proj-card">
-  <div class="proj-img-wrap"><img src="images/corp_36.jpeg" alt="Decorative CNC Perforated Sheet"></div>
-  <div class="proj-info">
-    <div class="proj-name">Decorative CNC Perforated Sheet</div>
-    <div class="proj-loc"><span>Location:</span> Grand Views Maydan Dubai</div>
-    <div class="proj-client"><span>Client:</span> Private Client</div>
-  </div>
-</div>
-<div class="proj-card">
-  <div class="proj-img-wrap"><img src="images/corp_37.jpeg" alt="Swimming Pool Glass Fence"></div>
-  <div class="proj-info">
-    <div class="proj-name">Swimming Pool Glass Fence</div>
-    <div class="proj-loc"><span>Location:</span> Dubai Hills Sidra 1</div>
-    <div class="proj-client"><span>Client:</span> Private Client</div>
-  </div>
-</div>
-<div class="proj-card">
-  <div class="proj-img-wrap"><img src="images/corp_38.jpeg" alt="Outdoor Area Shower Partition"></div>
-  <div class="proj-info">
-    <div class="proj-name">Outdoor Area Shower Partition</div>
-    <div class="proj-loc"><span>Location:</span> Grand Views Maydan Dubai</div>
-    <div class="proj-client"><span>Client:</span> Private Client</div>
-  </div>
-</div>
-</div>
-  </div>
-  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span></div>
-</div>
-<div class="page">
-  <div class="page-header"><img class="header-logo" src="images/corp_39.png" alt="SAQ"><div class="header-text"><strong>SAFA AL QUDRA</strong> TECHNICAL SERVICES</div></div>
-  <div class="page-body">
-    <div class="proj-grid"><div class="proj-card">
-  <div class="proj-img-wrap"><img src="images/corp_40.jpeg" alt="Extended Skylight"></div>
-  <div class="proj-info">
-    <div class="proj-name">Extended Skylight</div>
-    <div class="proj-loc"><span>Location:</span> Grand Views Maydan Dubai</div>
-    <div class="proj-client"><span>Client:</span> Private Client</div>
-  </div>
-</div>
-<div class="proj-card">
-  <div class="proj-img-wrap"><img src="images/corp_41.jpeg" alt="Extended Skylight with Glass Top and Front"></div>
-  <div class="proj-info">
-    <div class="proj-name">Extended Skylight with Glass Top and Front</div>
-    <div class="proj-loc"><span>Location:</span> Grand Views Maydan Dubai</div>
-    <div class="proj-client"><span>Client:</span> Private Client</div>
-  </div>
-</div>
-<div class="proj-card">
-  <div class="proj-img-wrap"><img src="images/corp_42.jpeg" alt="Wall Mirrors"></div>
-  <div class="proj-info">
-    <div class="proj-name">Wall Mirrors</div>
-    <div class="proj-loc"><span>Location:</span> Dubai Hills Sidra 3</div>
-    <div class="proj-client"><span>Client:</span> Private Client</div>
-  </div>
-</div>
-<div class="proj-card">
-  <div class="proj-img-wrap"><img src="images/corp_43.jpeg" alt="Ceiling Mirrors"></div>
-  <div class="proj-info">
-    <div class="proj-name">Ceiling Mirrors</div>
-    <div class="proj-loc"><span>Location:</span> Dubai Hills Sidra 3</div>
-    <div class="proj-client"><span>Client:</span> Private Client</div>
-  </div>
-</div>
-</div>
-  </div>
-  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span></div>
+  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span><span class="page-number"></span></div>
 </div>
 <div class="page">
   <div class="page-header"><img class="header-logo" src="images/corp_44.png" alt="SAQ"><div class="header-text"><strong>SAFA AL QUDRA</strong> TECHNICAL SERVICES</div></div>
@@ -1117,7 +1052,7 @@ body {
 </div>
 </div>
   </div>
-  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span></div>
+  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span><span class="page-number"></span></div>
 </div>
 <div class="page">
   <div class="page-header"><img class="header-logo" src="images/corp_49.png" alt="SAQ"><div class="header-text"><strong>SAFA AL QUDRA</strong> TECHNICAL SERVICES</div></div>
@@ -1156,7 +1091,7 @@ body {
 </div>
 </div>
   </div>
-  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span></div>
+  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span><span class="page-number"></span></div>
 </div>
 <div class="page">
   <div class="page-header"><img class="header-logo" src="images/corp_54.png" alt="SAQ"><div class="header-text"><strong>SAFA AL QUDRA</strong> TECHNICAL SERVICES</div></div>
@@ -1195,7 +1130,7 @@ body {
 </div>
 </div>
   </div>
-  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span></div>
+  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span><span class="page-number"></span></div>
 </div>
 <div class="page">
   <div class="page-header"><img class="header-logo" src="images/corp_59.png" alt="SAQ"><div class="header-text"><strong>SAFA AL QUDRA</strong> TECHNICAL SERVICES</div></div>
@@ -1216,67 +1151,10 @@ body {
     <div class="proj-client"><span>Client:</span> Private Client</div>
   </div>
 </div>
-<div class="proj-card">
-  <div class="proj-img-wrap"><img src="images/corp_62.jpeg" alt="Stainless Steel Decorative Works"></div>
-  <div class="proj-info">
-    <div class="proj-name">Stainless Steel Decorative Works</div>
-    <div class="proj-loc"><span>Location:</span> JBR Dubai</div>
-    <div class="proj-client"><span>Client:</span> Private Client</div>
-  </div>
-</div>
-<div class="proj-card">
-  <div class="proj-img-wrap"><img src="images/corp_63.jpeg" alt="Stainless Steel Decorative Works"></div>
-  <div class="proj-info">
-    <div class="proj-name">Stainless Steel Decorative Works</div>
-    <div class="proj-loc"><span>Location:</span> JBR Dubai</div>
-    <div class="proj-client"><span>Client:</span> Private Client</div>
-  </div>
-</div>
 </div>
   </div>
-  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span></div>
+  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span><span class="page-number"></span></div>
 </div>
-<div class="page">
-  <div class="page-header"><img class="header-logo" src="images/corp_64.png" alt="SAQ"><div class="header-text"><strong>SAFA AL QUDRA</strong> TECHNICAL SERVICES</div></div>
-  <div class="page-body">
-    <div class="proj-grid"><div class="proj-card">
-  <div class="proj-img-wrap"><img src="images/corp_65.jpeg" alt="Stainless Steel Decorative Panel and Console Table"></div>
-  <div class="proj-info">
-    <div class="proj-name">Stainless Steel Decorative Panel and Console Table</div>
-    <div class="proj-loc"><span>Location:</span> JBR Dubai</div>
-    <div class="proj-client"><span>Client:</span> Private Client</div>
-  </div>
-</div>
-<div class="proj-card">
-  <div class="proj-img-wrap"><img src="images/corp_66.jpeg" alt="Stainless Steel Decorative Panel and Console Table"></div>
-  <div class="proj-info">
-    <div class="proj-name">Stainless Steel Decorative Panel and Console Table</div>
-    <div class="proj-loc"><span>Location:</span> JBR Dubai</div>
-    <div class="proj-client"><span>Client:</span> Private Client</div>
-  </div>
-</div>
-<div class="proj-card">
-  <div class="proj-img-wrap"><img src="images/corp_67.jpeg" alt="Dining Table Structure Made by MS and Finish with Stainless Steel"></div>
-  <div class="proj-info">
-    <div class="proj-name">Dining Table Structure Made by MS and Finish with Stainless Steel</div>
-    <div class="proj-loc"><span>Location:</span> JBR Dubai</div>
-    <div class="proj-client"><span>Client:</span> Private Client</div>
-  </div>
-</div>
-<div class="proj-card">
-  <div class="proj-img-wrap"><img src="images/corp_68.jpeg" alt="Dining Table Structure Made by MS and Finish with Stainless Steel"></div>
-  <div class="proj-info">
-    <div class="proj-name">Dining Table Structure Made by MS and Finish with Stainless Steel</div>
-    <div class="proj-loc"><span>Location:</span> JBR Dubai</div>
-    <div class="proj-client"><span>Client:</span> Private Client</div>
-  </div>
-</div>
-</div>
-  </div>
-  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span></div>
-</div>
-
-<\!-- ===== FACTORY & MACHINERY ===== -->
 <div class="page">
   <div class="page-header"><img class="header-logo" src="images/corp_69.png" alt="SAQ"><div class="header-text"><strong>SAFA AL QUDRA</strong> TECHNICAL SERVICES</div></div>
   <div class="page-body">
@@ -1294,7 +1172,7 @@ body {
 
     </div>
   </div>
-  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span></div>
+  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span><span class="page-number"></span></div>
 </div>
 
 <\!-- ===== HSE PAGES ===== -->
@@ -1307,7 +1185,7 @@ body {
 <div class="hse-section"><h3 class="hse-title">Unsafe Working Conditions</h3><p class="hse-body">1. Whenever a dangerous working condition exists that requires immediate corrective action, the employee(s) should notify their supervisor at once.<br>2. The Management shall investigate the alleged dangerous condition and render a decision within two (2) working days.<br>3. Where a working condition is thought to be unsafe but does not require immediate corrective action, the employee(s) should fill out Service Maintenance form.<br>4. An employee or group of employees who refuse a work assignment because of a reasonable belief that to perform such work would endanger physical safety should use the expedited complaint procedure.</p></div>
 
   </div>
-  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span></div>
+  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span><span class="page-number"></span></div>
 </div>
 <div class="page">
   <div class="page-header"><img class="header-logo" src="images/corp_79.png" alt="SAQ"><div class="header-text"><strong>SAFA AL QUDRA</strong> TECHNICAL SERVICES</div></div>
@@ -1318,7 +1196,7 @@ body {
 <div class="hse-section"><h3 class="hse-title">Eye Protection</h3><p class="hse-body">Eye protection is required for certain jobs and areas of work.<br>1. All employees exposed to flying objects, particles, molten metal, gases, fumes will be provided with appropriate eye protection.<br>2. An eyewash and deluge shower is required where chemical splashes are possible.<br>3. Foreign objects should be removed from an employee's eye only by a qualified person.<br>4. Eye protection equipment is available through your department.</p></div>
 
   </div>
-  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span></div>
+  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span><span class="page-number"></span></div>
 </div>
 <div class="page">
   <div class="page-header"><img class="header-logo" src="images/corp_80.png" alt="SAQ"><div class="header-text"><strong>SAFA AL QUDRA</strong> TECHNICAL SERVICES</div></div>
@@ -1329,7 +1207,7 @@ body {
 <div class="hse-section"><h3 class="hse-title">Hearing Protection</h3><p class="hse-body">If the noise level in your work area is high, ask your supervisor to request a sound level survey.<br>1. All noise hazard areas should be marked.<br>2. Employees in noise-hazard areas will be provided with hearing protectors and annual training.<br>3. Hearing protection is required when ambient noise is above 85 decibels.</p></div>
 
   </div>
-  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span></div>
+  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span><span class="page-number"></span></div>
 </div>
 <div class="page">
   <div class="page-header"><img class="header-logo" src="images/corp_81.png" alt="SAQ"><div class="header-text"><strong>SAFA AL QUDRA</strong> TECHNICAL SERVICES</div></div>
@@ -1340,7 +1218,7 @@ body {
 <div class="hse-section"><h3 class="hse-title">Ladders</h3><p class="hse-body">Use only ladders in good repair and equipped with safety shoes.<br>1. Report any defects to your supervisor.<br>2. Be sure the ladder is long enough to do the job safely.<br>3. Fiberglass ladders are preferred when working around electrical equipment.<br>4. Never use the top three feet of an extension ladder.</p></div>
 
   </div>
-  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span></div>
+  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span><span class="page-number"></span></div>
 </div>
 <div class="page">
   <div class="page-header"><img class="header-logo" src="images/corp_82.png" alt="SAQ"><div class="header-text"><strong>SAFA AL QUDRA</strong> TECHNICAL SERVICES</div></div>
@@ -1350,7 +1228,7 @@ body {
 <div class="hse-section"><h3 class="hse-title">Confined Space Entry</h3><p class="hse-body">A confined space is any enclosed area with limited means of entry which contains known or potential hazards.<br><br>Managers shall: Be responsible for all training; authorize only trained employees to enter; ensure health and safety; monitor the worksite.<br><br>Employees shall: Observe all rules and precautions; enter only after authorization.<br><br>Under no circumstances shall employees: Enter an untested confined space; enter a space known to contain a dangerous atmosphere; enter without authorization.</p></div>
 
   </div>
-  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span></div>
+  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span><span class="page-number"></span></div>
 </div>
 
 <\!-- ===== CONTACT PAGE ===== -->
@@ -1374,8 +1252,13 @@ body {
       <div class="contact-info" style="margin-top:3mm;">United Arab Emirates</div>
     </div>
   </div>
-  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span></div>
+  <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span><span class="page-number"></span></div>
 </div>
 
 </body>
 </html>
+
+
+
+
+
