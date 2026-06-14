@@ -484,6 +484,37 @@ body {
   border-top: 1px solid #eee;
 }
 .logo-strip img { max-height: 12mm; max-width: 22mm; }
+.steel-partner-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3mm;
+  margin-top: 2mm;
+}
+.steel-partner-card {
+  min-height: 25mm;
+  background: rgba(255,255,255,0.82);
+  border: 1px solid #D9E1E8;
+  border-top: 2px solid #D4A843;
+  border-radius: 2px;
+  padding: 2mm;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+.steel-logo-wrap {
+  height: 13mm;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.steel-logo-wrap img { max-height: 12mm; max-width: 42mm; object-fit: contain; }
+.steel-logo-wrap img.steel-logo-al-huda { width: 22mm; max-height: none; transform: scale(1.4); }
+.steel-partner-name { color: #0C2340; font-size: 7.5pt; font-weight: 700; line-height: 1.2; }
+.steel-partner-role { color: #D4A843; font-size: 6.5pt; font-weight: 700; letter-spacing: 0.7px; text-transform: uppercase; }
 
 /* ===== PROCESS ===== */
 .process-step {
@@ -797,6 +828,24 @@ body {
     </div>
     <div class="logo-strip">
       <img src="images/corp_8.jpeg" alt="Partner"><img src="images/corp_9.jpeg" alt="Partner"><img src="images/corp_10.jpeg" alt="Partner"><img src="images/corp_11.jpeg" alt="Partner"><img src="images/corp_12.jpeg" alt="Partner"><img src="images/corp_13.jpeg" alt="Partner">
+    </div>
+    <div class="sub-header">Steel Range</div>
+    <div class="steel-partner-grid">
+      <div class="steel-partner-card">
+        <div class="steel-logo-wrap"><img src="images/steel_dss.png" alt="DSS Steel LLC logo"></div>
+        <div class="steel-partner-name">DSS STEEL LLC</div>
+        <div class="steel-partner-role">Trader</div>
+      </div>
+      <div class="steel-partner-card">
+        <div class="steel-logo-wrap"><img class="steel-logo-al-huda" src="images/steel_al_huda.png" alt="Al Huda Steel Contracting logo"></div>
+        <div class="steel-partner-name">Al Huda Steel Contracting</div>
+        <div class="steel-partner-role">Trader</div>
+      </div>
+      <div class="steel-partner-card">
+        <div class="steel-logo-wrap"><img src="images/steel_dimension.png" alt="Dimension Metal Fabrication logo"></div>
+        <div class="steel-partner-name">Dimension Metal Fabrication</div>
+        <div class="steel-partner-role">Fabricator</div>
+      </div>
     </div>
   </div>
   <div class="page-footer"><span class="foot-site">www.saqtechnicalservices.com</span><span class="foot-email">info@saqtechnicalservices.com</span><span class="foot-slogan">Quality Earns Respect &bull; We Deliver What We Promise</span></div>
